@@ -18,11 +18,11 @@ The script might ask for Password if the user is not root
 
 Pass arguement -c to set Current Directory as Apache Root
 
-   $ apachange -c
+    $ apachange -c
    
 Passing no arguement will result in the script asking for path to set the root
 
-   $ apachange   
+    $ apachange   //This will ask for path
    
 The command will also Restart the Apache server
 
