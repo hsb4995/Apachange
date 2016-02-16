@@ -1,0 +1,8 @@
+#!/bin/bash  
+
+if [ "$1" = "-c" ];then
+echo 'Changing Current Directory';
+php /usr/bin/apachange.php -c
+else
+php /usr/bin/apachange.php -a
+fi
