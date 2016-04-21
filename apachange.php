@@ -22,8 +22,10 @@ for($i=0;$i<$num;++$i)
 {
 echo"_";
 }
-
+if(isset($argv[1])){
 $arguement1=$argv[1];
+}else{
+$arguement1='a';}
 
 if($arguement1=='-c')
 {
@@ -74,7 +76,9 @@ else
     $file1=str_replace($string,$path,$file);
     file_put_contents($apache,$file1);
     echo "\n";
-    $cmd=system('sudo service apache2 restart');
+    $cmd=shell_exec('sudo service apache2 reload 2>&1');
     echo "\n";
+	
   }
 ?>
+
