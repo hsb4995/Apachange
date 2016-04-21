@@ -1,20 +1,42 @@
 <?php
 
+$num=shell_exec('tput cols');
+
+for($i=0;$i<$num;++$i)
+{
+echo"_";
+}
+
+for($i=0;$i<$num;++$i)
+{
+echo" ";
+}
+
+for($i=0;$i<$num/2-5;++$i)
+{
+echo" ";
+}
+echo" Apachange \n";
+
+for($i=0;$i<$num;++$i)
+{
+echo"_";
+}
+
 $arguement1=$argv[1];
 
 if($arguement1=='-c')
 {
-   echo "Setting ";
    $path=system('pwd');
-   echo" as new Root for Apache";
+   echo"Setting ".$path." as new Root for Apache \n";
 }
 else
 {
-    $path=readline("Enter the directory to change Root for Apache  ");
+    $path=readline("Enter the directory to change Root for Apache  \n");
 }
   if($path=='~')
   {
-     echo 'Username:';
+     echo "Username: \n";
      $user=system('echo $USER');
      $path='/home/'.$user;
    }
@@ -42,7 +64,7 @@ else
          $posi=$pathy+$y;
        }
     }
-    echo "Current root for Apache: ";
+    echo "Current root for Apache: \n";
     $string='';
     for($i=$pathy;$i<$posi;++$i)
     {
